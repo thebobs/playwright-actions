@@ -21,7 +21,7 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run E2E tests
       run: npx playwright test
-    - name: Publish HTMK report
+    - name: Publish HTML report
       uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
