@@ -9,8 +9,10 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
+    - name: Get Code # Colocamos para organizar
+      uses: actions/checkout@v4 # actions é um plugin do github para executar ações, nesse caso, checkout é para baixar o código do repositório
+    - name: Install Node
+      uses: actions/setup-node@v4
       with:
         node-version: lts/*
     - name: Install dependencies
